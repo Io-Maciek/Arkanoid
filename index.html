@@ -1,31 +1,67 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="pl">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | ArkanoidProjekt</title>
+    <title>Arkanoid</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+	
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
   </head>
-  <body>
-    <a href="https://github.com/Io-Maciek/Arkanoid">Wróć do github</a>
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
-        </div>
-      </div>
-      <div id="unity-mobile-warning">
-        WebGL builds are not supported on mobile devices.
-      </div>
-      <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">ArkanoidProjekt</div>
-      </div>
+  <body style="background-color: black">
+  
+  
+    <div class="container-fluid">
+        <nav class="navbar navbar-toggleable-md navbar-light" style="background-color: darkslategray;">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <span style="color:white">Arkanoid</span>              
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+                        <a target="_blank" style="color:white" class="nav-link" href="https://github.com/Io-Maciek/Arkanoid">Kod na GitHub</a>
+                    </li>
+					<li class="nav-item active">
+                        <a target="_blank" style="color:white" class="nav-link" href="https://github.com/Io-Maciek">Profil twórcy</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
+	<br/>
+  
+    <div class="container">
+		<div id="unity-container">
+		  <canvas id="unity-canvas" width=960 height=600></canvas>
+		  <div id="unity-loading-bar">
+			<div id="unity-logo"></div>
+			<div id="unity-progress-bar-empty">
+			  <div id="unity-progress-bar-full"></div>
+			</div>
+		  </div>
+		  <div id="unity-mobile-warning">
+			Gra może być niestabilna na urządzeniu mobilnym.
+		  </div>
+		  <div id="unity-footer">
+			<div  id="unity-fullscreen-button"></div>
+			<div style="color:white" id="unity-build-title">Arkanoid</div>
+		  </div>
+		</div>
+	</div>
+	
+	
+	
+	
     <script>
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/BUILD_HTML.loader.js";
